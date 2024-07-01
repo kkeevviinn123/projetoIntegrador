@@ -1,0 +1,64 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #849fae;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.popup-content input[type="email"]::placeholder,
+.popup-content input[type="text"]::placeholder,
+.popup-content input[type="password"]::placeholder {
+    text-transform: capitalize; /* Primeira letra maiúscula */
+}
+
+.popup-content input[type="email"],
+.popup-content input[type="text"],
+.popup-content input[type="password"] {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.popup-content button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #cc0000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+}
+
+.close:hover {
+    color: #333;
+}
