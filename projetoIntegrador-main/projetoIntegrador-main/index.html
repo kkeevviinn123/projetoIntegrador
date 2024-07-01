@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos • GameCine</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/popup-criar-conta.css">
+    <link rel="stylesheet" href="./assets/css/popup-entrar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="game">Game</span><span class="cine">Cine</span>
+            </div>
+            <ul class="menu">
+                <li><a href="#" onclick="showLoginPopup()">Entrar</a></li>
+                <li><a href="#" onclick="showPopup()">Criar Conta</a></li>
+                <li><a href="../gamecine-main/gamecine-main/index.html">Jogos</a></li>
+                <li><a href="#">Listas</a></li>
+                <li><a href="#">Comunidades</a></li>
+                <li><a
+                        href="../noticias/primer-pagina-html-css-js-main/primer-pagina-html-css-js/index.html">Notícias</a>
+                </li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="submit">Buscar</button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="popup-overlay" class="popup-overlay" onclick="hidePopup(); hideLoginPopup();"></div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <h2>Junte-se ao GameCine</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Criar Conta</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hideLoginPopup()">&times;</span>
+            <h2>Entrar no GameCine</h2>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha:</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
